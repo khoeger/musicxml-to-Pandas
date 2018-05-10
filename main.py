@@ -79,10 +79,13 @@ specificPart = "./part[@id='"+str(partId)+"']"
 measures = root.findall(specificPart+"/measure")
 # One measure
 #measureNum = measures[0].attrib['number']
+size = 0
 for num in range(len(measures)):
     measureNum = measures[num].attrib['number']
     measureInfo = returnMeasureInfo(partId, measureNum)
     print(measureInfo)
+    size +=1
+print(size)
 
 
 #"""
